@@ -684,34 +684,3 @@ body {
     transform: rotate(8deg) scale(1.2);
   }
 }
-
-@media (max-width: 400px) {
-  .tentacle {
-    width: 120px; /* было 50px */
-    bottom: -10px;
-    opacity: 0.6;
-  }
-  .tentacle-left {
-    left: -30px;
-    transform: rotate(-5deg) scale(1.1);
-  }
-  .tentacle-right {
-    right: -30px;
-    transform: rotate(5deg) scale(1.1);
-  }
-}
-
-/* Для самых маленьких экранов - оставляем, но уменьшаем прозрачность */
-@media (max-width: 360px) {
-  .tentacle {
-    width: 100px;
-    bottom: -8px;
-    opacity: 0.4;
-  }
-  .tentacle-left {
-    left: -25px;
-  }
-  .tentacle-right {
-    right: -25px;
-  }
-}
