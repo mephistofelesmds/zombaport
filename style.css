@@ -694,37 +694,17 @@ body {
 
 @media (max-width: 850px) {
   .tentacle {
-    width: 120px;
-    bottom: -20px;
-  }
-  .tentacle-left { left: -30px; }
-  .tentacle-right { right: -30px; }
-}
-
-@media (max-width: 550px) {
-  .tentacle {
-    width: 80px;
-    bottom: -10px;
-    opacity: 0.6;
-  }
-  .tentacle-left { left: -15px; transform: rotate(-10deg); }
-  .tentacle-right { right: -15px; transform: rotate(10deg); }
-}
-
-/* Адаптация для щупалец на мобильных устройствах */
-@media (max-width: 850px) {
-  .tentacle {
     width: 100px;
     bottom: -15px;
     opacity: 0.7;
   }
   .tentacle-left {
     left: -25px;
-    transform: rotate(-10deg) scale(0.9);
+    transform: rotate(-10deg) scale(1);
   }
   .tentacle-right {
     right: -25px;
-    transform: rotate(10deg) scale(0.9);
+    transform: rotate(10deg) scale(1);
   }
 }
 
@@ -736,11 +716,11 @@ body {
   }
   .tentacle-left {
     left: -15px;
-    transform: rotate(-8deg) scale(0.8);
+    transform: rotate(-8deg) scale(0.9);
   }
   .tentacle-right {
     right: -15px;
-    transform: rotate(8deg) scale(0.8);
+    transform: rotate(8deg) scale(0.9);
   }
 }
 
