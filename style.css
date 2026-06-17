@@ -663,3 +663,50 @@ body {
   .card-title-group { flex-wrap: wrap; gap: 0.6rem; }
   .logo h1 { font-size: 1.8rem; }
 }
+
+
+.main-card {
+  position: relative; 
+  overflow: visible;  
+  z-index: 1;         
+}
+
+.tentacle {
+  position: absolute;
+  bottom: -30px;      
+  width: 180px;       
+  height: auto;
+  pointer-events: none;  
+  z-index: 0;         
+  opacity: 0.85;      
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tentacle-left {
+  left: -50px;         
+  transform: rotate(-15deg) scale(1); 
+}
+
+.tentacle-right {
+  right: -50px;        
+  transform: rotate(15deg) scale(1);
+}
+
+@media (max-width: 850px) {
+  .tentacle {
+    width: 120px;
+    bottom: -20px;
+  }
+  .tentacle-left { left: -30px; }
+  .tentacle-right { right: -30px; }
+}
+
+@media (max-width: 550px) {
+  .tentacle {
+    width: 80px;
+    bottom: -10px;
+    opacity: 0.6;
+  }
+  .tentacle-left { left: -15px; transform: rotate(-10deg); }
+  .tentacle-right { right: -15px; transform: rotate(10deg); }
+}
