@@ -652,35 +652,75 @@ body {
   }
 }
 
-/* Адаптация для щупалец на мобильных устройствах - УВЕЛИЧЕННЫЙ РАЗМЕР */
+@media (max-width: 550px) {
+  .page-container { padding: 0; gap: 1.5rem; }
+  .main-card { padding: 1.5rem; }
+  .hero-section { padding: 1rem; }
+  .hero-title { font-size: 2rem; }
+  .gallery-4 { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+  .video-wrapper video { max-height: 200px; }
+  .card-title-group h3 { font-size: 1.4rem; }
+  .card-title-group { flex-wrap: wrap; gap: 0.6rem; }
+  .logo h1 { font-size: 1.8rem; }
+}
+
+
+.main-card {
+  position: relative; 
+  overflow: visible;  
+  z-index: 1;         
+}
+
+.tentacle {
+  position: absolute;
+  bottom: -30px;      
+  width: 180px;       
+  height: auto;
+  pointer-events: none;  
+  z-index: 0;         
+  opacity: 0.85;      
+  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.tentacle-left {
+  left: -50px;         
+  transform: rotate(-15deg) scale(1); 
+}
+
+.tentacle-right {
+  right: -50px;        
+  transform: rotate(15deg) scale(1);
+}
+
 @media (max-width: 850px) {
   .tentacle {
-    width: 200px; /* было 100px - теперь больше */
-    bottom: -20px;
-    opacity: 0.8;
+    width: 150px;
+    bottom: -15px;
+    opacity: 0.7;
   }
   .tentacle-left {
-    left: -60px; /* отодвигаем левее, чтобы не перекрывать текст */
-    transform: rotate(-10deg) scale(1.1);
+    left: -25px;
+    transform: rotate(-10deg) scale(1);
   }
   .tentacle-right {
-    right: -60px; /* отодвигаем правее */
-    transform: rotate(10deg) scale(1.1);
+    right: -25px;
+    transform: rotate(10deg) scale(1);
   }
 }
 
 @media (max-width: 550px) {
   .tentacle {
-    width: 150px; /* было 70px */
-    bottom: -15px;
-    opacity: 0.7;
+    width: 130px;
+    bottom: -10px;
   }
   .tentacle-left {
     left: -40px;
-    transform: rotate(-8deg) scale(1.2);
+    bottom: -50px;
+    transform: rotate(5deg) scale(0.9);
+    width: 90px;
   }
   .tentacle-right {
-    right: -40px;
-    transform: rotate(8deg) scale(1.2);
+    right: -60px;
+    transform: rotate(10deg) scale(1);
   }
 }
