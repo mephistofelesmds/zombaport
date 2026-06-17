@@ -710,3 +710,52 @@ body {
   .tentacle-left { left: -15px; transform: rotate(-10deg); }
   .tentacle-right { right: -15px; transform: rotate(10deg); }
 }
+
+/* Адаптация для щупалец на мобильных устройствах */
+@media (max-width: 850px) {
+  .tentacle {
+    width: 100px;
+    bottom: -15px;
+    opacity: 0.7;
+  }
+  .tentacle-left {
+    left: -25px;
+    transform: rotate(-10deg) scale(0.9);
+  }
+  .tentacle-right {
+    right: -25px;
+    transform: rotate(10deg) scale(0.9);
+  }
+}
+
+@media (max-width: 550px) {
+  .tentacle {
+    width: 70px;
+    bottom: -10px;
+    opacity: 0.5;
+  }
+  .tentacle-left {
+    left: -15px;
+    transform: rotate(-8deg) scale(0.8);
+  }
+  .tentacle-right {
+    right: -15px;
+    transform: rotate(8deg) scale(0.8);
+  }
+}
+
+@media (max-width: 400px) {
+  .tentacle {
+    width: 50px;
+    bottom: -5px;
+    opacity: 0.4;
+  }
+  .tentacle-left {
+    left: -10px;
+    transform: rotate(-5deg) scale(0.7);
+  }
+  .tentacle-right {
+    right: -10px;
+    transform: rotate(5deg) scale(0.7);
+  }
+}
